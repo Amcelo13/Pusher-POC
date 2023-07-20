@@ -32,6 +32,7 @@ const App = () => {
     if (msg) setChat([...chat, msg]);
   }, [msg]);
 
+  //on enter
   const handleTextChange = async (e) => {
     if (e.keyCode === 13) {
       const payload = {
@@ -44,7 +45,8 @@ const App = () => {
       } catch (error) {
         console.log(error);
       }
-    } else {
+    } 
+    else {
       setText(e.target.value);
     }
   };
